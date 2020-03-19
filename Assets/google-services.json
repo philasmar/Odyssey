@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "35366397782",
+    "firebase_url": "https://odyssey-80079.firebaseio.com",
+    "project_id": "odyssey-80079",
+    "storage_bucket": "odyssey-80079.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35366397782:android:cf37705bea785c32ff58f7",
+        "android_client_info": {
+          "package_name": "com.odyssey.odyssey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35366397782-jvgr6g1varoo90k2i8bifkqgkg0m7q3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZizSVbf0C20_2UACa1YilBMU0GdyYwjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35366397782-jvgr6g1varoo90k2i8bifkqgkg0m7q3j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "35366397782-9i4afkrcu0i7cs4cugr5u9pnpphhgah8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.odyssey.odyssey"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
