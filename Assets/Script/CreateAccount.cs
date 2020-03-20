@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Firebase;
 using Firebase.Unity.Editor;
 using Firebase.Database;
+using System.Threading.Tasks;
 
 public class CreateAccount : FirebaseConnect
 {
@@ -45,6 +46,16 @@ public class CreateAccount : FirebaseConnect
             string json = JsonUtility.ToJson(user);
 
             reference.Child("users").Push().SetRawJsonValueAsync(json);
+            clearUI();
         }
+    }
+
+    public void clearUI()
+    {
+        firstName.text = "";
+        lastName.text = "";
+        username.text = "";
+        email.text = "";
+        password.text = "";
     }
 }
