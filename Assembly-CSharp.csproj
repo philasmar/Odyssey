@@ -63,37 +63,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\CreateAccount.cs" />
     <Compile Include="Assets\Script\FirebaseConnect.cs" />
     <Compile Include="Assets\Script\JSON\AccountTemplate.cs" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/phil/GitHub/Odyssey/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -272,29 +273,29 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>/Users/phil/GitHub/Odyssey/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>/Users/phil/GitHub/Odyssey/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    <Reference Include="Unity.Compat">
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tasks">
-      <HintPath>/Users/phil/GitHub/Odyssey/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>/Users/phil/GitHub/Odyssey/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Auth">
-      <HintPath>/Users/phil/GitHub/Odyssey/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Compat">
-      <HintPath>/Users/phil/GitHub/Odyssey/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.TaskExtension">
-      <HintPath>/Users/phil/GitHub/Odyssey/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
+    <Reference Include="Google.MiniJson">
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Database">
-      <HintPath>/Users/phil/GitHub/Odyssey/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Platform">
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.TaskExtension">
+      <HintPath>/Users/phil/GitHub/Odyssey/Odyssey/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.4f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -650,7 +651,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.4f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
-    <Compile Include="Assets\Script\CreateAccount.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
