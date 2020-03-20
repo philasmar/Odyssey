@@ -1,4 +1,5 @@
 ﻿using System;
+[Serializable]
 public class AccountTemplate
 {
     public string firstname;

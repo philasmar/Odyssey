@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{A75BBD33-517A-BA8E-4FF4-7FF8708A33F9}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/CreateAccount.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/FirebaseConnect.cs">
     <Files>
-      <File FileName="Assets/Script/CreateAccount.cs" Line="40" Column="13" />
-      <File FileName="Assets/Script/FirebaseConnect.cs" Line="14" Column="99" />
-      <File FileName="Assets/Script/JSON/AccountTemplate.cs" Line="4" Column="27" />
+      <File FileName="Assets/Script/CreateAccount.cs" Line="50" Column="63" />
+      <File FileName="Assets/Script/JSON/AccountTemplate.cs" />
+      <File FileName="Assets/Script/LoginAccount.cs" />
+      <File FileName="Assets/Script/FirebaseConnect.cs" Line="3" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +13,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
                 <Node name="JSON" expanded="True" />
-                <Node name="CreateAccount.cs" selected="True" />
+                <Node name="FirebaseConnect.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -22,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e6e848a8-6af5-4a5c-b733-3611c3bf91ce" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9d9ed113-13fa-4db8-aaf3-59209a5db316" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
