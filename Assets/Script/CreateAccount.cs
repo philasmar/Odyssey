@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 public class CreateAccount : FirebaseConnect
 {
@@ -38,6 +39,7 @@ public class CreateAccount : FirebaseConnect
                     AccountTemplate user = new AccountTemplate(firstName.text, lastName.text, username.text, email.text, password.text);
                     FirebaseConnect.put("/users/" + username.text, user);
                     clearUI();
+                    SceneManager.LoadScene("LoginScreen");
                 }
                 else
                 {

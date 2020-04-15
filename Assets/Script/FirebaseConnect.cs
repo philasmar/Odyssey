@@ -54,4 +54,18 @@ public class FirebaseConnect : MonoBehaviour
             }
         });
     }
+
+    public static void get(string child, GetUserCallback callback)
+    {
+        RestClient.Get(baseurl + child + "/.json").Then(response => {
+            if (response.Text.Equals("null"))
+            {
+                callback(false);
+            }
+            else
+            {
+                callback(response.Text);
+            }
+        });
+    }
 }
