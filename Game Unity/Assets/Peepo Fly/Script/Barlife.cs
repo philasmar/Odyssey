@@ -17,12 +17,16 @@ public class Barlife : MonoBehaviour
     {
         Manage = GameObject.Find("Manage").GetComponent<Manage>();
         Cam = GameObject.Find("Main Camera");
-        Manage.Life = 3;
-        Manage.Score = 0;
-        Manage.Jumpscore = 0;
+        if (!Manage.keepScore)
+        {
+            Manage.Life = 3;
+            Manage.Score = 0;
+            Manage.Jumpscore = 0;
+        }
         Manage.Lose = false;
         Manage.Startgame = false;
-       Showitem();
+        Manage.keepScore = false;
+        Showitem();
      
         Coinscore.text = "Coin Score : " + (int)Manage.Coin;
        

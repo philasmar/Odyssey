@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e81353781dc98a44cbd18add59cf988e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Memphis LT Pro
+  fontNames:
+  - Memphis LT Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d58bbe11fcaac8f459aa68169eb18c1c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

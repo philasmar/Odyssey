@@ -23,16 +23,19 @@ public class Manage : MonoBehaviour
     public int Score;
     public int Jumpscore;
     public int Coin;
+    public bool keepScore = false;
     public GameObject []Coins;
     public GameObject []Balloon;
     public GameObject Cloud;
+
 
     public int Bestscore;
     public int Bestjumpscore;
 
     public GameObject Again;
     public GameObject Pause;
- 
+    public GameObject Question;
+
 
     public int Sunglass;
     public int Cap;
@@ -77,7 +80,23 @@ public class Manage : MonoBehaviour
          PlayerPrefs.SetInt("Bestscore", Bestscore);
        PlayerPrefs.SetInt("Bestjumpscore", Bestjumpscore);
     }
-   
+
+    public void Questionmenu()
+    {
+        StartCoroutine(activequestionmenu());
+        GameObject.Find("Buttons-arrow").SetActive(false);
+        if (Bestscore < Score)
+        {
+            Bestscore = Score;
+        }
+        if (Bestjumpscore < Jumpscore)
+        {
+            Bestjumpscore = Jumpscore;
+        }
+        PlayerPrefs.SetInt("Bestscore", Bestscore);
+        PlayerPrefs.SetInt("Bestjumpscore", Bestjumpscore);
+    }
+
     public void Saveplayer()
     {
         PlayerPrefs.SetInt("Sunglass", Sunglass);
@@ -94,6 +113,13 @@ public class Manage : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         Savecion();
         Again.SetActive(true);
+    }
+
+    IEnumerator activequestionmenu()
+    {
+        yield return new WaitForSeconds(1f);
+        Savecion();
+        Question.SetActive(true);
     }
     // Update is called once per frame
     void Update()
@@ -123,6 +149,10 @@ public class Manage : MonoBehaviour
     {
         Pause.SetActive(false);
         Time.timeScale = 1;
+    }
+    public void HideQuestion()
+    {
+        Question.SetActive(false);
     }
     public void InstantiateJump()
     {

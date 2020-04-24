@@ -8,6 +8,7 @@ public class Startgame : MonoBehaviour
     private Barlife Barlife;
     public GameObject Again;
     public GameObject Pause;
+    public GameObject Question;
     public GameObject []Player;
    
     void Start()
@@ -16,6 +17,7 @@ public class Startgame : MonoBehaviour
         Manage = GameObject.Find("Manage").GetComponent<Manage>();
         Manage.Again = Again;
         Manage.Pause = Pause;
+        Manage.Question = Question;
         Instantiate(Player[Manage.Playernumber], new Vector3(0, -3f, 0), Quaternion.identity);
 
 

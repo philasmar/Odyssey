@@ -109,6 +109,7 @@
     <Compile Include="Assets\Script\JSON\AccountTemplate.cs" />
     <Compile Include="Assets\Script\JSON\LoginTemplate.cs" />
     <Compile Include="Assets\Script\LoginAccount.cs" />
+    <Compile Include="Assets\Script\QuestionScreen.cs" />
     <Compile Include="Assets\Script\UserProps.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

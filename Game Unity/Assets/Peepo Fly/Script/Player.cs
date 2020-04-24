@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     private AudioSource Playeraudio;
     private AudioSource Hearthaudio;
     private AudioSource Stoneaudio;
+    private QuestionScreen QuestionScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
         Playeraudio= GameObject.Find("Playeraudio").GetComponent<AudioSource>();
         Hearthaudio = GameObject.Find("Hearthaudio").GetComponent<AudioSource>();
         Stoneaudio = GameObject.Find("Stoneaudio").GetComponent<AudioSource>();
+        QuestionScreen = GameObject.Find("SceneController").GetComponent<QuestionScreen>();
         Manage.Player = gameObject;
         Rgb2d = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
@@ -165,10 +167,12 @@ public class Player : MonoBehaviour
             }
             Manage.Life = 0;
             Manage.Lose = true;
-            Manage.Againmenu();
+            QuestionScreen.loadQuestion();
+            Manage.Questionmenu();
             Items.Showitem();
             Instantiate(feather[2], new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(gameObject);
+            //Manage.Questionmenu();
 
         }
             if (coll.gameObject.tag == "Bird") {
