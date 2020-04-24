@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ManageDiabetes.unity
     guid: 2eb5c4ec514d747f2b15cddc13f86577
+  - enabled: 1
+    path: Assets/Scenes/QuestionInput.unity
+    guid: a16c37dc1125c467aaf129f32657a8dc
   m_configObjects: {}

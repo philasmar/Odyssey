@@ -19,7 +19,7 @@ public class QuestionScreen : MonoBehaviour
 
     string questionID = "";
     Question question;
-    List<int> options = new List<int>();
+    List<double> options = new List<double>();
     bool loaded = false;
     System.Timers.Timer aTimer;
     // Start is called before the first frame update
@@ -51,7 +51,7 @@ public class QuestionScreen : MonoBehaviour
                 options.Add(question.insulin);
                 while (options.Count < 3)
                 {
-                    int rand = RandomNumber(1, 6);
+                    double rand = RandomDouble(1, 6);
                     if (!options.Contains(rand))
                     {
                         options.Add(rand);
@@ -84,7 +84,9 @@ public class QuestionScreen : MonoBehaviour
                 }
                 timerLeft = 16.0f;
                 loaded = true;
-                Debug.Log("New Question");
+                Manage.Questionmenu();
+            }, error=> {
+                Manage.Againmenu();
             });
         }
     }
@@ -109,14 +111,22 @@ public class QuestionScreen : MonoBehaviour
         return random.Next(min, max);
     }
 
+    public double RandomDouble(int min, int max)
+    {
+        System.Random random = new System.Random();
+        return Math.Round(random.NextDouble() * (max - min) + min, 1);
+    }
+
     public void option1Click()
     {
         if (question.insulin == options[0])
         {
+            logAnswer(question.insulin, true);
             continueGame();
         }
         else
         {
+            logAnswer(options[0], false);
             restartGame();
         }
     }
@@ -125,10 +135,12 @@ public class QuestionScreen : MonoBehaviour
     {
         if (question.insulin == options[1])
         {
+            logAnswer(question.insulin, true);
             continueGame();
         }
         else
         {
+            logAnswer(options[1], false);
             restartGame();
         }
     }
@@ -137,10 +149,12 @@ public class QuestionScreen : MonoBehaviour
     {
         if (question.insulin == options[2])
         {
+            logAnswer(question.insulin, true);
             continueGame();
         }
         else
         {
+            logAnswer(options[2], false);
             restartGame();
         }
     }
@@ -169,7 +183,11 @@ public class QuestionScreen : MonoBehaviour
         Manage.keepScore = false;
     }
 
-
+    public void logAnswer(double ans, bool correct)
+    {
+        AnswerTemplate answer = new AnswerTemplate(ans, correct);
+        FirebaseConnect.post("/answers/" + PlayerPrefs.GetString("User", "") + "/" + questionID, answer);
+    }
 }
 
 public class Question
@@ -177,5 +195,5 @@ public class Question
     public string activity { get; set; }
     public int bloodsugar { get; set; }
     public string food { get; set; }
-    public int insulin { get; set; }
+    public double insulin { get; set; }
 }

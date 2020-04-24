@@ -408,7 +408,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 387323605}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2115691980}
+        m_MethodName: openQuestionInputScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &387323605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +813,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -3.734278e-19, z: 4.5747e-41, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0.12581038, z: 4.5815e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

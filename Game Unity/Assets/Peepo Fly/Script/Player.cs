@@ -174,7 +174,7 @@ public class Player : MonoBehaviour
             else
             {
                 QuestionScreen.loadQuestion();
-                Manage.Questionmenu();
+                //Manage.Questionmenu();
             }
             Items.Showitem();
             Instantiate(feather[2], new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);

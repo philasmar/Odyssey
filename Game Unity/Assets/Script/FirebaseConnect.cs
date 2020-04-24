@@ -30,10 +30,18 @@ public class FirebaseConnect : MonoBehaviour
 
     //}
     public delegate void GetUserCallback(System.Object obj);
+    public delegate void GetUserCallbackError(System.Object obj);
 
     public static void post(string child, object obj)
     {
-        RestClient.Post(baseurl + child + "/.json", obj);
+        Debug.Log(baseurl + child + "/.json");
+        try
+        {
+            RestClient.Post(baseurl + child + "/.json", obj).Then(response=>Debug.Log(response.ToString())).Catch(err => Debug.Log(err.Message)); ;
+        }catch(Exception ex)
+        {
+            Debug.Log(ex.Message + " | " + ex.StackTrace);
+        }
     }
 
     public static void put(string child, object obj)
@@ -43,7 +51,8 @@ public class FirebaseConnect : MonoBehaviour
 
     public static void get<T>(string child, GetUserCallback callback)
     {
-        RestClient.Get(baseurl + child + "/.json").Then(response=> {
+        RestClient.Get(baseurl + child + "/.json").Then(response =>
+        {
             if (response.Text.Equals("null"))
             {
                 callback(false);
@@ -67,5 +76,19 @@ public class FirebaseConnect : MonoBehaviour
                 callback(response.Text);
             }
         });
+    }
+
+    public static void get(string child, GetUserCallback callback, GetUserCallbackError callbackError)
+    {
+        RestClient.Get(baseurl + child + "/.json").Then(response => {
+            if (response.Text.Equals("null"))
+            {
+                callback(false);
+            }
+            else
+            {
+                callback(response.Text);
+            }
+        }).Catch(err => callbackError(err.Message));
     }
 }

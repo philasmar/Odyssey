@@ -48,6 +48,11 @@ public class ManageDiabetesController : MonoBehaviour
         SceneManager.LoadScene("CreateAccount");
     }
 
+    public void openQuestionInputScreen()
+    {
+        SceneManager.LoadScene("QuestionInput");
+    }
+
     public void signOut()
     {
         PlayerPrefs.SetString("User", "");

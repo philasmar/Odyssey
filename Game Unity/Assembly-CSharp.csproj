@@ -106,10 +106,13 @@
     <Compile Include="Assets\Script\CreateAccount.cs" />
     <Compile Include="Assets\Script\FirebaseConnect.cs" />
     <Compile Include="Assets\Script\JSON\AccountTemplate.cs" />
+    <Compile Include="Assets\Script\JSON\AnswerTemplate.cs" />
+    <Compile Include="Assets\Script\JSON\FoodInputTemplate.cs" />
     <Compile Include="Assets\Script\JSON\LoginTemplate.cs" />
     <Compile Include="Assets\Script\LoginAccount.cs" />
     <Compile Include="Assets\Script\ManageDiabetesController.cs" />
     <Compile Include="Assets\Script\ProgressOverview.cs" />
+    <Compile Include="Assets\Script\QuestionInput.cs" />
     <Compile Include="Assets\Script\QuestionScreen.cs" />
     <Compile Include="Assets\Script\UserProps.cs" />
     <None Include="Assets\link.xml" />
