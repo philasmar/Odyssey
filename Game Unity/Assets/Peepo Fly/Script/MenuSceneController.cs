@@ -13,7 +13,14 @@ public class MenuSceneController : MonoBehaviour
 
     public void openManageDiabetesScreen()
     {
-        SceneManager.LoadScene("ManageDiabetes");
+        if (!PlayerPrefs.GetString("User", "").Equals(""))
+        {
+            SceneManager.LoadScene("ManageDiabetes");
+        }
+        else
+        {
+            SceneManager.LoadScene("LoginScreen");
+        }
     }
 
     // Update is called once per frame
