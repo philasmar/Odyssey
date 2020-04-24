@@ -13,7 +13,7 @@ public class MenuSceneController : MonoBehaviour
 
     public void openLoginScreen()
     {
-        SceneManager.LoadScene("LoginScreen");
+        SceneManager.LoadScene("ProgressOverview");
     }
 
     // Update is called once per frame
