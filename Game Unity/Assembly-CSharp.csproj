@@ -79,7 +79,6 @@
     <Compile Include="Assets\Peepo Fly\Script\Rotate.cs" />
     <Compile Include="Assets\Peepo Fly\Script\Startgame.cs" />
     <Compile Include="Assets\Peepo Fly\Script\Transformposition.cs" />
-    <Compile Include="Assets\ProgressOverview.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\MainScript.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\Model\Photo.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\Model\Post.cs" />
@@ -109,6 +108,8 @@
     <Compile Include="Assets\Script\JSON\AccountTemplate.cs" />
     <Compile Include="Assets\Script\JSON\LoginTemplate.cs" />
     <Compile Include="Assets\Script\LoginAccount.cs" />
+    <Compile Include="Assets\Script\ManageDiabetesController.cs" />
+    <Compile Include="Assets\Script\ProgressOverview.cs" />
     <Compile Include="Assets\Script\QuestionScreen.cs" />
     <Compile Include="Assets\Script\UserProps.cs" />
     <None Include="Assets\link.xml" />
@@ -341,6 +342,15 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.7f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Assets/Plugins/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
@@ -349,15 +359,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Tasks">
-      <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Assets/Plugins/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Compat">
-      <HintPath>/Users/phil/Documents/GitHub/Odyssey/Game Unity/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.7f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

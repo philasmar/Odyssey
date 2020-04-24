@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProgressOverview.unity
     guid: 0fc72cf0a21ec4449884b0dea1a65ba8
+  - enabled: 1
+    path: Assets/Scenes/ManageDiabetes.unity
+    guid: 2eb5c4ec514d747f2b15cddc13f86577
   m_configObjects: {}

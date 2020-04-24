@@ -28,7 +28,10 @@ public class LoginAccount : FirebaseConnect
             FirebaseConnect.get<AccountTemplate>("/users/" + username.text, existing => {
                 if (existing is AccountTemplate account && account.password.Equals(password.text))
                 {
-                    SceneManager.LoadScene("Game");
+                    PlayerPrefs.SetString("User", username.text);
+                    PlayerPrefs.SetString("UserFirstName", account.firstname);
+                    PlayerPrefs.SetString("UserLastName", account.lastname);
+                    SceneManager.LoadScene("ManageDiabetes");
                     //failedPanel.SetActive(false);
                     //AccountTemplate user = new AccountTemplate(firstName.text, lastName.text, username.text, email.text, password.text);
                     //FirebaseConnect.put("/users/" + username.text, user);

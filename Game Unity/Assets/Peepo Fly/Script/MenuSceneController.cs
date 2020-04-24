@@ -11,9 +11,9 @@ public class MenuSceneController : MonoBehaviour
         
     }
 
-    public void openLoginScreen()
+    public void openManageDiabetesScreen()
     {
-        SceneManager.LoadScene("ProgressOverview");
+        SceneManager.LoadScene("ManageDiabetes");
     }
 
     // Update is called once per frame
