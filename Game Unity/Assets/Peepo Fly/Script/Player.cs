@@ -167,8 +167,15 @@ public class Player : MonoBehaviour
             }
             Manage.Life = 0;
             Manage.Lose = true;
-            QuestionScreen.loadQuestion();
-            Manage.Questionmenu();
+            if (PlayerPrefs.GetString("User", "").Equals(""))
+            {
+                Manage.Againmenu();
+            }
+            else
+            {
+                QuestionScreen.loadQuestion();
+                Manage.Questionmenu();
+            }
             Items.Showitem();
             Instantiate(feather[2], new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(gameObject);

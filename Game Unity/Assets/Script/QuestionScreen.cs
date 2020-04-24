@@ -33,57 +33,60 @@ public class QuestionScreen : MonoBehaviour
 
     public void loadQuestion()
     {
-        FirebaseConnect.get("/questions/" + UserProps.user, existing => {
-            Dictionary<string, Question> entryDict = JsonConvert.DeserializeObject<Dictionary<string, Question>>(existing.ToString());
-            List<Question> entries = entryDict.Select(x => x.Value).ToList();
-            int randomnum = RandomNumber(0, entryDict.Count);
-            questionID = entryDict.ElementAt(randomnum).Key;
-            question = entryDict.ElementAt(randomnum).Value;
-            questionText.text = String.Format(
-                "You are eating {0} and you CGM reading is {1}." +
-                Environment.NewLine +
-                Environment.NewLine +
-                "How much insulin should you take?",
-                         question.food, question.bloodsugar);
+        if(!PlayerPrefs.GetString("User", "").Equals(""))
+        {
+            FirebaseConnect.get("/questions/" + PlayerPrefs.GetString("User", ""), existing => {
+                Dictionary<string, Question> entryDict = JsonConvert.DeserializeObject<Dictionary<string, Question>>(existing.ToString());
+                List<Question> entries = entryDict.Select(x => x.Value).ToList();
+                int randomnum = RandomNumber(0, entryDict.Count);
+                questionID = entryDict.ElementAt(randomnum).Key;
+                question = entryDict.ElementAt(randomnum).Value;
+                questionText.text = String.Format(
+                    "You are eating {0} and you CGM reading is {1}." +
+                    Environment.NewLine +
+                    Environment.NewLine +
+                    "How much insulin should you take?",
+                             question.food, question.bloodsugar);
 
-            options.Add(question.insulin);
-            while (options.Count < 3)
-            {
-                int rand = RandomNumber(1, 6);
-                if (!options.Contains(rand))
+                options.Add(question.insulin);
+                while (options.Count < 3)
                 {
-                    options.Add(rand);
+                    int rand = RandomNumber(1, 6);
+                    if (!options.Contains(rand))
+                    {
+                        options.Add(rand);
+                    }
                 }
-            }
-            options.Sort();
-            if (options[0] == 1)
-            {
-                option1.text = "1 Unit";
-            }
-            else
-            {
-                option1.text = options[0] + " Units";
-            }
-            if (options[1] == 1)
-            {
-                option2.text = "1 Unit";
-            }
-            else
-            {
-                option2.text = options[1] + " Units";
-            }
-            if (options[2] == 1)
-            {
-                option3.text = "1 Unit";
-            }
-            else
-            {
-                option3.text = options[2] + " Units";
-            }
-            timerLeft = 16.0f;
-            loaded = true;
-            Debug.Log("New Question");
-        });
+                options.Sort();
+                if (options[0] == 1)
+                {
+                    option1.text = "1 Unit";
+                }
+                else
+                {
+                    option1.text = options[0] + " Units";
+                }
+                if (options[1] == 1)
+                {
+                    option2.text = "1 Unit";
+                }
+                else
+                {
+                    option2.text = options[1] + " Units";
+                }
+                if (options[2] == 1)
+                {
+                    option3.text = "1 Unit";
+                }
+                else
+                {
+                    option3.text = options[2] + " Units";
+                }
+                timerLeft = 16.0f;
+                loaded = true;
+                Debug.Log("New Question");
+            });
+        }
     }
     public float timerLeft = 0f;
     // Update is called once per frame

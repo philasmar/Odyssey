@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class UserProps
 {
-    public static string user = "phil";
+    //public static string user = "phil";
 }
