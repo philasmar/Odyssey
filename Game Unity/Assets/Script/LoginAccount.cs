@@ -46,6 +46,16 @@ public class LoginAccount : FirebaseConnect
         }
     }
 
+    public void openMenuScreen()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void openCreateAccountScreen()
+    {
+        SceneManager.LoadScene("CreateAccount");
+    }
+
     public void clearUI()
     {
         username.text = "";

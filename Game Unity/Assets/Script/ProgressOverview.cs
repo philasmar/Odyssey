@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ProgressOverview : MonoBehaviour
@@ -63,12 +64,17 @@ public class ProgressOverview : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void openManageDiabetesScreen()
+    {
+        SceneManager.LoadScene("ManageDiabetes");
     }
 }
 
 public class Item
 {
-    public int answer { get; set; }
+    public double answer { get; set; }
     public bool correct { get; set; }
 }

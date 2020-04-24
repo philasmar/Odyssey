@@ -39,6 +39,11 @@ public class QuestionInput : FirebaseConnect
         }
     }
 
+    public void openManageDiabetesScreen()
+    {
+        SceneManager.LoadScene("ManageDiabetes");
+    }
+
 
     public void clearUI()
     {

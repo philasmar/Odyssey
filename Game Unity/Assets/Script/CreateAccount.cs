@@ -50,6 +50,11 @@ public class CreateAccount : FirebaseConnect
         }
     }
 
+    public void openLoginScreen()
+    {
+        SceneManager.LoadScene("LoginScreen");
+    }
+
 
     public void clearUI()
     {
